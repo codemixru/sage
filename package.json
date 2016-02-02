@@ -1,0 +1,23 @@
+{
+  "name": "sage",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codemixru/sage.git"
+  },
+  "author": "Codemixru",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codemixru/sage/issues"
+  },
+  "homepage": "https://github.com/codemixru/sage#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1"
+  }
+}
