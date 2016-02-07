@@ -1,4 +1,4 @@
-## Верстка макета [Sage](http://idealui.com/shop/sage/)
+## Верстка макета [Sage](http://idealui.com/shop/sage/) [![Build Status](https://travis-ci.org/codemixru/sage.svg?branch=master)](https://travis-ci.org/codemixru/sage)
 
 ### Main Features
 * [Susy](http://susy.oddbird.net/) - Power tools for the web
