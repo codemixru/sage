@@ -5,9 +5,27 @@ var sass = require('gulp-sass'); // Компилятор Libsass
 var rigger = require('gulp-rigger'); // Импортирует файл в другой файл
 var imagemin = require('gulp-imagemin'); // Сжимает картинки
 var pngquant = require('imagemin-pngquant'); // Дополнение к Imagemin
+var spritesmith = require('gulp.spritesmith'); // Генерация спрайтов
 var browserSync = require("browser-sync"),  // Localhost сервер с livereload и туннелью на localhost
     reload = browserSync.reload;
 
+
+gulp.task('sprite', function() {
+    var spriteData =
+        gulp.src('source/img/icons/*.*') // путь, откуда берем картинки для спрайта
+            .pipe(spritesmith({
+                imgName: 'sprite.png',
+                cssName: 'sprite.scss',
+                cssFormat: 'scss',
+                algorithm: 'binary-tree',
+                cssVarMap: function(sprite) {
+                    sprite.name = 's-' + sprite.name
+                }
+            }));
+
+    spriteData.img.pipe(gulp.dest('source/img/sprite/')); // путь, куда сохраняем картинку
+    spriteData.css.pipe(gulp.dest('source/sass/')); // путь, куда сохраняем стили
+});
 
 gulp.task('html', function () {
   gulp.src('source/*.html')
@@ -17,7 +35,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('sass', function () {
-  gulp.src('source/sass/main.scss')
+  gulp.src('source/sass/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist/css/'))
     .pipe(reload({stream: true}));
@@ -54,7 +72,7 @@ var config = {
     server: {
         baseDir: "dist/"
     },
-    tunnel: true,
+    tunnel: false,
     host: 'localhost',
     port: 9000,
     logPrefix: "Sage"

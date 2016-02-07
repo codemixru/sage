@@ -1,3 +1,159 @@
+@import "bower_components/susy/sass/susy";
+@import "bower_components/compass-breakpoint/stylesheets/breakpoint";
+
+
+$susy: (
+ flow: ltr,
+ math: fluid,
+ output: float,
+ gutter-position: after,
+ container: 1200px,
+ container-position: center,
+ columns: 12,
+ gutters: 1/2.2,
+ column-width: 70px,
+ global-box-sizing: content-box,
+ last-flow: to,
+ debug: (
+	 image: show,
+	 color: rgba(#66f, .25),
+	 output: overlay,
+	 toggle: top right,
+ ),
+ use-custom: (
+	 background-image: true,
+	 background-options: false,
+	 box-sizing: true,
+	 clearfix: false,
+	 rem: true,
+ )
+);
+
 body {
-  background-color: #f0f0d0;
+  background-color: #352d2f;
+}
+.header {
+	@include container;
+  height: 70px;
+}
+.logotype {
+  @include span(1);
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  opacity: 0.1;
+}
+.navigation {
+  @include span(6);
+  @include pre(2);
+}
+.navigation ul {
+  display: inline;
+}
+.navigation li {
+  list-style: none;
+  float: left;
+  padding: 26px 18px 26px 19px;
+}
+
+.active a {
+  border-bottom: solid #fff 4px;
+  color: #fff;
+}
+
+.navigation a {
+  color: #fff;
+  font-family: TitilliumWeb;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  padding-bottom: 21px;
+}
+.navigation a:active {
+  border-bottom: solid #fff 4px;
+}
+.navigation a:hover {
+  border-bottom: solid #fff 4px;
+}
+.search {
+  @include span(1 last);
+  padding: 25px 0 0 0;
+}
+
+.search-field {
+	background-color: transparent;
+	background-image: url(../img/search.png);
+	background-position: 5px center;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+  height: 21px;
+	padding: 0 15px;
+	position: relative;
+	width: 0;
+}
+
+.search-field:focus {
+	border: 2px solid #fff;
+	cursor: text;
+  color: #fff;
+	outline: 0;
+	width: 150px;
+}
+
+.search-submit {
+  display: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+
+.wrapper {
+	@include container();
+}
+
+.introduction {
+  @include span(12);
+  margin: 250px 0 0 0;
+}
+.introduction h1 {
+  text-align: center;
+  color: white;
+  font-family: Teko;
+  letter-spacing: 15px;
+  font-size: 120px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.button-watch {
+  background: none;
+  border: 2px solid #fff;
+}
+.button-watch p {
+  text-decoration: none;
+  letter-spacing: 5px;
+  color: white;
+  font-family: Teko;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.about-us {
+  background: #fff;
+  @include span(12);
+}
+.about-us {
+  background-color: #fff;
+}
+.about-us h2 {
+  color: black;
+  font-family: Teko;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
 }

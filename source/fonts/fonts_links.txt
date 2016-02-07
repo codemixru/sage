@@ -1,0 +1,5 @@
+<link href='https://fonts.googleapis.com/css?family=Teko:400,300|Titillium+Web:400,300' rel='stylesheet' type='text/css'>
+@import url(https://fonts.googleapis.com/css?family=Teko:400,300|Titillium+Web:400,300);
+
+font-family: 'Teko', sans-serif;
+font-family: 'Titillium Web', sans-serif;

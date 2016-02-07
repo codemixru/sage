@@ -1,2 +1,193 @@
 body {
-  background-color: #f0f0d0; }
+  background-color: #352d2f; }
+
+.header {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70px; }
+  .header:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  head {
+    display: block;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 999;
+    color: #333;
+    background: rgba(255, 255, 255, 0.25); }
+  head:before {
+    content: "|||";
+    display: block;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold; }
+  head:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: red; }
+  head:hover ~ .header,
+  head:hover ~ body .header {
+    position: relative; }
+    head:hover ~ .header:before,
+    head:hover ~ body .header:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: " ";
+      z-index: 998;
+      background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 68.75%, transparent 68.75%);
+      background-size: 8.55615%;
+      background-origin: content-box;
+      background-clip: content-box;
+      background-position: left top; }
+
+.logotype {
+  width: 5.88235%;
+  float: left;
+  margin-right: 2.6738%; }
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  opacity: 0.1; }
+
+.navigation {
+  width: 48.6631%;
+  float: left;
+  margin-right: 2.6738%;
+  margin-left: 17.1123%; }
+
+.navigation ul {
+  display: inline; }
+
+.navigation li {
+  list-style: none;
+  float: left;
+  padding: 26px 18px 26px 19px; }
+
+.active a {
+  border-bottom: solid #fff 4px;
+  color: #fff; }
+
+.navigation a {
+  color: #fff;
+  font-family: TitilliumWeb;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  padding-bottom: 21px; }
+
+.navigation a:active {
+  border-bottom: solid #fff 4px; }
+
+.navigation a:hover {
+  border-bottom: solid #fff 4px; }
+
+.search {
+  width: 5.88235%;
+  float: right;
+  margin-right: 0;
+  padding: 25px 0 0 0; }
+
+.search-field {
+  background-color: transparent;
+  background-image: url(../img/search.png);
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  height: 21px;
+  padding: 0 15px;
+  position: relative;
+  width: 0; }
+
+.search-field:focus {
+  border: 2px solid #fff;
+  cursor: text;
+  color: #fff;
+  outline: 0;
+  width: 150px; }
+
+.search-submit {
+  display: none; }
+
+input[type="search"] {
+  -webkit-appearance: textfield; }
+
+.wrapper {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .wrapper:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  head:hover ~ .wrapper,
+  head:hover ~ body .wrapper {
+    position: relative; }
+    head:hover ~ .wrapper:before,
+    head:hover ~ body .wrapper:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: " ";
+      z-index: 998;
+      background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 68.75%, transparent 68.75%);
+      background-size: 8.55615%;
+      background-origin: content-box;
+      background-clip: content-box;
+      background-position: left top; }
+
+.introduction {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin: 250px 0 0 0; }
+
+.introduction h1 {
+  text-align: center;
+  color: white;
+  font-family: Teko;
+  letter-spacing: 15px;
+  font-size: 120px;
+  font-weight: 300;
+  text-transform: uppercase; }
+
+.button-watch {
+  background: none;
+  border: 2px solid #fff; }
+
+.button-watch p {
+  text-decoration: none;
+  letter-spacing: 5px;
+  color: white;
+  font-family: Teko;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+.about-us {
+  background: #fff;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0; }
+
+.about-us {
+  background-color: #fff; }
+
+.about-us h2 {
+  color: black;
+  font-family: Teko;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase; }
