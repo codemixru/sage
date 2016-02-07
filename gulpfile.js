@@ -12,7 +12,7 @@ var browserSync = require("browser-sync"),  // Localhost сервер с liverel
 
 gulp.task('sprite', function() {
     var spriteData =
-        gulp.src('source/img/icons/*.*') // путь, откуда берем картинки для спрайта
+        gulp.src('source/img/icons/*.*')
             .pipe(spritesmith({
                 imgName: 'sprite.png',
                 cssName: 'sprite.scss',
@@ -23,8 +23,8 @@ gulp.task('sprite', function() {
                 }
             }));
 
-    spriteData.img.pipe(gulp.dest('source/img/sprite/')); // путь, куда сохраняем картинку
-    spriteData.css.pipe(gulp.dest('source/sass/')); // путь, куда сохраняем стили
+    spriteData.img.pipe(gulp.dest('source/img/sprite/'));
+    spriteData.css.pipe(gulp.dest('source/sass/'));
 });
 
 gulp.task('html', function () {
@@ -49,7 +49,7 @@ gulp.task('image', function () {
         use: [pngquant()],
         interlaced: true
     }))
-    .pipe(gulp.dest('dist/img/')) //И бросим в build
+    .pipe(gulp.dest('dist/img/'))
     .pipe(reload({stream: true}));
 });
 
